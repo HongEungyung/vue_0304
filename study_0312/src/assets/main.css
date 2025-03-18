@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    padding: 5%;
+    max-width: 1200px;
+    margin: auto;
+}
+button{
+    padding: 5px 10px ;
+    cursor: pointer;
+    background-color: aliceblue;
+    border-radius: 5px;
+    border: 0.1px solid;
+}
+
+button:hover{
+    background-color: rgb(164, 213, 255);
+}

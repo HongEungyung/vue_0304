@@ -16,9 +16,9 @@ const isAvailable = ref(true);
 const selectDate = ref("");
 </script>
 <template>
-  <div>
+  <div class="container">
     <!-- v-if , v-show -->
-    <h1>1. v-if , v-show</h1>
+    <h1>v-if , v-show</h1>
     <button @click="isVisible = !isVisible">토글</button>
     <p v-if="isVisible">
       v-if : 조건이 true 일 때만 표시 (조건이 false 면) DOM에서 완전히 제거 됨.
@@ -30,15 +30,15 @@ const selectDate = ref("");
     </p>
     <hr />
 
-    <h1>2. If</h1>
+    <h2>1. If</h2>
     <div class="if">
       <button @click="awesome = !awesome">전환</button>
-      <h2 v-if="awesome">Vue는 정말 멋지죠! 😻</h2>
-      <h2 v-else>아닌가요? 😿</h2>
+      <h3 v-if="awesome">Vue는 정말 멋지죠! 😻</h3>
+      <h3 v-else>아닌가요? 😿</h3>
     </div>
     <hr />
 
-    <h1>3. Else</h1>
+    <h2>2. Else</h2>
     <div class="else">
       <div v-if="type1 === 'A'">A</div>
       <div v-else-if="type1 === 'B'">B</div>
@@ -53,8 +53,8 @@ const selectDate = ref("");
     <hr />
 
     <!-- 단락표시 -->
-    <h1>4. 토글</h1>
-    <h2>제목</h2>
+    <h2>3. 토글</h2>
+    <h3>제목</h3>
     <button @click="ok = !ok">단락표시여부 토글</button>
     <div v-if="ok" class="info">
       <p>단락1</p>
@@ -63,7 +63,7 @@ const selectDate = ref("");
     <hr />
 
     <!-- 로그인 상태에 따라 에약 버튼 보이기 -->
-    <h1>5. 토글 / 버튼 변경</h1>
+    <h2>4. 토글 / 버튼 변경</h2>
     <div>
       <button @click="loginToggle">
         {{ isLogin ? "로그아웃" : "로그인" }}
@@ -75,9 +75,9 @@ const selectDate = ref("");
     <hr />
 
     <!-- 예약 가능 여부에 따라 버튼 다르게 보이기 -->
-    <h1>6. 버튼 변경</h1>
+    <h2>5. 버튼 변경</h2>
     <div class="container">
-      <h2>예약 가능 여부</h2>
+      <h3>예약 가능 여부</h3>
       <p :class="{ available: isAvailable, unavailable: !isAvailable }">
         <!-- 객체 문법 (:class="{ 클래스명1 : 조건1, 클래스명2 : 조건2 }) -->
         {{
@@ -95,9 +95,9 @@ const selectDate = ref("");
     <hr />
 
     <!-- 날짜 선택 후 화면 보이기 -->
-    <h1>7. 날짜 선택</h1>
+    <h2>6. 날짜 선택</h2>
     <div class="date-container">
-      <h2>예약 날짜 선택</h2>
+      <h3>예약 날짜 선택</h3>
       <input type="date" class="date-input" v-model="selectDate" />
       <p :class="{ selected: selectDate, unselected: !selectDate }">
         {{
